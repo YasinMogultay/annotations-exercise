@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Author extends Person {
-    private List<String> books;
+    private List<String> books; // data type setted for String
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
-        books = new ArrayList<>();
+        books = new ArrayList<>(); // missing angle brackets
     }
 
     /**
@@ -24,12 +24,12 @@ public class Author extends Person {
         return books;
     }
 
-    public void addBook(String book) { //generified this method
+    public void addBook(String book) {
         books.add(book);
     }
 
     @Override
-    public String sortName() {
+    public String fullName() {
         return String.format("%s, %s", lastName, firstName);
-    } // made it abstract
+    } // made subclass name same with Parent
 }
